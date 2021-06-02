@@ -9,7 +9,7 @@ pipeline {
     }
     environment {
         // This can be nexus3 or nexus2
-        NEXUS_VERSION = "nexus3"
+        NEXUS_VERSION = "NEXUS3"
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
@@ -17,7 +17,7 @@ pipeline {
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY = "pipeline"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "nexus"
+        NEXUS_CREDENTIAL_ID = "Nexus"
     }
     stages {
         stage("clone code") {
