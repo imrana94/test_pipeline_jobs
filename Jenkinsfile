@@ -4,7 +4,7 @@ pipeline {
  
      tools {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
-        maven "Maven"
+        maven "maven"
         
     }
     environment {
@@ -13,11 +13,11 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "3.128.153.69:8081/"
+        NEXUS_URL = "18.116.72.128:8081/"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "ncodeit-scripted"
+        NEXUS_REPOSITORY = "pipeline"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "nexus-server"
+        NEXUS_CREDENTIAL_ID = "nexus"
     }
     stages {
         stage("clone code") {
@@ -25,7 +25,7 @@ pipeline {
                 script {
                     
 				    // Let's clone the source
-                    git 'https://github.com/betawins/test_pipeline_jobs.git';
+                    git 'https://github.com/imrana94/test_pipeline_jobs.git';
                    
                 } 
             }
