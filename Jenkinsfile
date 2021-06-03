@@ -84,6 +84,9 @@ pipeline {
 					} 
                 }
             }
+	    stage("Email Notification") {
+		    mail bcc: '', body: '''hi welcome to email alerts
+thanks''', cc: '', from: '', replyTo: '', subject: 'jenkins job', to: 'imranabgum518@gmail.com'
         }
     }
 
